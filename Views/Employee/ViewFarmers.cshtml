@@ -1,0 +1,58 @@
+<!-- Views/Employee/ViewFarmers.cshtml -->
+@model IEnumerable<AgriEnergyConnect.ViewModels.FarmerViewModel>
+@* @model IEnumerable<FarmerViewModel> *@
+@{
+    ViewData["Title"] = "View Farmers";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Farmers</h2>
+            <form asp-controller="Employee" asp-action="SearchFarmers" method="get">
+                <div class="input-group mb-3">
+                    <input type="text" name="query" class="form-control" placeholder="Search farmers" />
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+          
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center">No farmers found.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @foreach (var farmer in Model)
+                        {
+                            <tr>
+                                <td>@farmer.Name</td>
+                                <td>@farmer.Email</td>
+                                <td>@farmer.PhoneNumber</td>
+                                <td>@farmer.Address</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">

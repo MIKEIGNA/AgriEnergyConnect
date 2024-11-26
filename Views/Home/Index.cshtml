@@ -1,0 +1,172 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Logo -->
+<div class="logo-container">
+    <img src="./images/logo.png" alt="AgriEnergy Logo" class="logo-img">
+</div>
+
+<!-- Hero Section -->
+<div class="container-fluid landing-bg d-flex align-items-center">
+    <div class="container text-center text-md-left">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="landing-content">
+                    <h1 class="display-3 text-success font-weight-bold">Welcome to AgriEnergy</h1>
+                    <p class="lead text-success font-italic">Connecting Farmers and Employees</p>
+                    <a href="/Account/Login" class="btn btn-lg btn-primary mt-3 shadow">Login</a>
+                </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <img src="./images/foreground.jpg" class="img-fluid rounded shadow-lg" alt="Farmers Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div id="features" class="container mt-5">
+    <h2 class="text-center text-success mb-5">Our Features</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="feature-card shadow-lg p-3 mb-5 bg-white rounded">
+                <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                <h3>For Employees</h3>
+                <p>Manage farmer profiles, view products, and more.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card shadow-lg p-3 mb-5 bg-white rounded">
+                <i class="fas fa-seedling fa-3x mb-3 text-success"></i>
+                <h3>For Farmers</h3>
+                <p>Add and manage products, track sales, and connect with others.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card shadow-lg p-3 mb-5 bg-white rounded">
+                <i class="fas fa-cogs fa-3x mb-3 text-warning"></i>
+                <h3>Easy to Use</h3>
+                <p>User-friendly interface designed for simplicity and efficiency.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .logo-container {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+
+    .logo-img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .landing-bg {
+        background-image: url('./images/backimage.avif');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 100px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .landing-content {
+        margin-top: 50px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .landing-content h1 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 3rem;
+    }
+
+    .landing-content p {
+        font-size: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 40px;
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card i {
+        margin-bottom: 20px;
+        transition: color 0.3s;
+    }
+
+    .feature-card:hover i {
+        color: #ff6f61;
+    }
+
+    .feature-card h3 {
+        color: #333;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .feature-card p {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    media (max-width: 767.98px) {
+        .landing-bg {
+            padding: 50px 0;
+        }
+
+        .landing-content {
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            padding: 30px;
+        }
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+
+    h2 {
+        font-family: 'Georgia', serif;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+
+    .text-success {
+        color: #28a745 !important;
+    }
+</style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>

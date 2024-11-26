@@ -1,0 +1,8 @@
+Farmer User:
+
+Email: farmer@example.com
+Password: Password123!
+Employee User:
+
+Email: employee@example.com
+Password: Password123!

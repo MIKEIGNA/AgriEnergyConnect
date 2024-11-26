@@ -23,10 +23,10 @@ This README provides all the necessary steps to set up, run, and use the system 
 
 ### **System Requirements**
 
-- **Operating System**: Windows/Linux/MacOS
+- **Operating System**: Windows
 - **Development Environment**: Visual Studio 2022 or later
 - **Framework**: ASP.NET Core 6.0 or higher
-- **Database**: SQL Server
+- **Database**: SQLite Server
 - **Browser**: Modern browsers like Chrome, Edge, or Firefox
 
 ---
@@ -42,24 +42,11 @@ This README provides all the necessary steps to set up, run, and use the system 
 2. **Open the Project**
    - Open the solution file (`AgriEnergyConnect.sln`) in Visual Studio.
 
-3. **Configure the Database**
-   - Update the connection string in `appsettings.json` to match your SQL Server instance:
-     ```json
-     "ConnectionStrings": {
-         "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=AgriEnergyConnectDB;Trusted_Connection=True;MultipleActiveResultSets=true"
-     }
-     ```
-
-4. **Run Migrations**
-   - Open the Package Manager Console in Visual Studio and run:
-     ```bash
-     Update-Database
-     ```
-
-5. **Run the Application**
+3. **Run the Application**
    - Press `F5` or use the **Run** button in Visual Studio.
+   - This will open a link on your default browser like so: https://localhost:7095/
 
-6. **Seed Data (Optional)**
+4. **Seed Data (Optional)**
    - If no users exist, manually add Farmers and Employees via the Admin section or through database scripts.
 
 ---
@@ -100,14 +87,20 @@ The navigation bar is dynamic and changes based on the logged-in user's role.
 
 #### **Farmer Workflow**
 1. Log in with your farmer credentials.
-2. Navigate to **Add Product** to add your products.
-3. Use the **View Products** page to review and search for your added products.
+2. Default credentials Farmer User:
+         - Email: farmer@example.com
+         - Password: Password123!
+3. Navigate to **Add Product** to add your products.
+4. Use the **View Products** page to review and search for your added products.
 
 #### **Employee Workflow**
 1. Log in with your employee credentials.
-2. Use **Add Farmer** to register new farmers.
-3. Visit **View Farmers** to search or manage existing farmer data.
-4. Access **View Products** to browse or search for products from all farmers.
+2. Default credentials Employee User:
+         - Email: employee@example.com
+         - Password: Password123!
+3. Use **Add Farmer** to register new farmers.
+4. Visit **View Farmers** to search or manage existing farmer data.
+5. Access **View Products** to browse or search for products from all farmers.
 
 ---
 
@@ -115,8 +108,7 @@ The navigation bar is dynamic and changes based on the logged-in user's role.
 
 1. **Database Connection Issues**
    - Ensure the connection string in `appsettings.json` matches your SQL Server instance.
-   - Run `Update-Database` to apply migrations.
-
+     
 2. **Unable to Log In**
    - Ensure user roles (`Farmer` or `Employee`) are correctly assigned.
    - Check the user table in the database for valid credentials.
@@ -134,7 +126,3 @@ The navigation bar is dynamic and changes based on the logged-in user's role.
 4. Open a pull request to the main branch.
 
 ---
-
-### **Support**
-
-If you encounter issues or have feature requests, please contact the development team at **support@agrienergyconnect.com**.

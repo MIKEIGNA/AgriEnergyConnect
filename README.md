@@ -1,5 +1,4 @@
 # AgriEnergyConnect
-### README: AgriEnergyConnect
 
 ---
 
